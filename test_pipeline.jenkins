@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/ahti1405/financial-data-processing'
+                git 'https://github.com/ahti1405/financial-data-processing.git'
             }
         }
         stage('Install Dependencies') {

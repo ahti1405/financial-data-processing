@@ -2,7 +2,7 @@ import pymssql
 import pytest
 
 # Database connection details
-DB_SERVER = "10.88.0.7\\SQLEXPRESS"  # Change if needed
+DB_SERVER = "localhost\\SQLEXPRESS"  # Change if needed
 DB_USER = "aktanbek"  # Your SQL Server username
 DB_PASSWORD = "Arzymamat5"  # Your SQL Server password
 DB_DATABASE = "AdventureWorks2022"  # Your database name

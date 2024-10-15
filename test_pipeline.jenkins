@@ -36,14 +36,8 @@ pipeline {
 
     post {
         always {
-            // Archive test results
             archiveArtifacts artifacts: '**/financial-data-processing/test-reports/*.xml', allowEmptyArchive: true
             junit '**/financial-data-processing/test-reports/*.xml'
-
-            // Cleanup actions
-            script {
-                sh 'rm -rf financial-data-processing'
-            }
         }
     }
 }

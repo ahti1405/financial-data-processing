@@ -1,35 +1,39 @@
 pipeline {
     agent any
+
     stages {
         stage('Clone Repository') {
             steps {
-                // Manually clone the repository
                 script {
-                    sh 'git clone https://github.com/ahti1405/financial-data-processing.git'
+                    try {
+                        sh 'git clone https://github.com/ahti1405/financial-data-processing.git'
+                    } catch (Exception e) {
+                        error "Failed to clone repository: ${e}"
+                    }
                 }
             }
         }
         stage('Setup Environment') {
-    steps {
-        script {
-            dir('financial-data-processing') {
-                sh 'python3 -m venv venv'
-                sh './venv/bin/pip install -r requirements.txt' // Adjust based on OS
+            steps {
+                script {
+                    dir('financial-data-processing') {
+                        sh 'python3 -m venv venv'
+                        sh './venv/bin/pip install -r requirements.txt'
+                    }
+                }
             }
         }
-    }
-}
         stage('Run Tests') {
             steps {
                 script {
-                    // Run tests inside the cloned repository directory
                     dir('financial-data-processing') {
-                        sh 'pytest'
+                        sh './venv/bin/pytest'
                     }
                 }
             }
         }
     }
+
     post {
         always {
             archiveArtifacts artifacts: '**/financial-data-processing/test-reports/*.xml', allowEmptyArchive: true

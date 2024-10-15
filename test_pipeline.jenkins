@@ -1,25 +1,40 @@
 pipeline {
-    agent any 
+    agent any
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/ahti1405/financial-data-processing.git'
+                // Manually clone the repository
+                script {
+                    sh 'git clone https://github.com/ahti1405/financial-data-processing.git'
+                }
             }
         }
         stage('Install Dependencies') {
             steps {
-                sh 'pip install -r requirements.txt'
+                script {
+                    // Navigate into the cloned repository directory
+                    dir('financial-data-processing') {
+                        // For example, install dependencies here
+                        sh 'pip install -r requirements.txt'
+                    }
+                }
             }
         }
         stage('Run Tests') {
             steps {
-                sh 'pytest tests/'
+                script {
+                    // Run tests inside the cloned repository directory
+                    dir('financial-data-processing') {
+                        sh 'pytest'
+                    }
+                }
             }
         }
     }
     post {
         always {
-            archiveArtifacts artifacts: '**/output/*', fingerprint: true
+            archiveArtifacts artifacts: '**/financial-data-processing/test-reports/*.xml', allowEmptyArchive: true
+            junit '**/financial-data-processing/test-reports/*.xml'
         }
     }
 }

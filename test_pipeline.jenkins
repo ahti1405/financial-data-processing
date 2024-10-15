@@ -43,7 +43,6 @@ pipeline {
             // Cleanup actions
             script {
                 sh 'rm -rf financial-data-processing'
-                sh 'rm -rf venv' // If the venv is outside the repo, otherwise it's cleaned up with the repo.
             }
         }
     }

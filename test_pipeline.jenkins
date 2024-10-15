@@ -10,16 +10,14 @@ pipeline {
             }
         }
         stage('Install Dependencies') {
-            steps {
-                script {
-                    // Navigate into the cloned repository directory
-                    dir('financial-data-processing') {
-                        // For example, install dependencies here
-                        sh 'pip install -r requirements.txt'
-                    }
-                }
+    steps {
+        script {
+            dir('financial-data-processing') {
+                sh '/usr/bin/pip install -r requirements.txt' // Use the actual path found
             }
         }
+    }
+}
         stage('Run Tests') {
             steps {
                 script {

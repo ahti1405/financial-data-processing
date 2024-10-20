@@ -2,7 +2,7 @@ import pymssql
 import pytest
 
 # Database connection details
-DB_SERVER = "192.168.86.3"  # Change if needed
+DB_SERVER = "192.168.0.103"  # Change if needed
 DB_USER = "aktanbek"  # Your SQL Server username
 DB_PASSWORD = "Arzymamat5"  # Your SQL Server password
 DB_DATABASE = "AdventureWorks2022"  # Your database name
@@ -10,7 +10,7 @@ DB_DATABASE = "AdventureWorks2022"  # Your database name
 @pytest.fixture(scope="module")
 def db_connection():
     """Establish a database connection."""
-    conn = pymssql.connect(server=DB_SERVER, user=DB_USER, password=DB_PASSWORD, database=DB_DATABASE)
+    conn = pymssql.connect(server=DB_SERVER, port='1433', user=DB_USER, password=DB_PASSWORD, database=DB_DATABASE)
     yield conn
     conn.close()
 

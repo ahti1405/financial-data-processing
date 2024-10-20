@@ -2,7 +2,7 @@ import pyodbc
 import pytest
 
 # Database connection details
-DB_CONNECTION_STRING = "DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost\\SQLEXPRESS;DATABASE=AdventureWorks2022;Trusted_Connection=Yes;"
+DB_CONNECTION_STRING = "DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost\\SQLEXPRESS;DATABASE=AdventureWorks2022;UID=aktanbek;PWD=Arzymamat5;"
 
 
 @pytest.fixture(scope="module")

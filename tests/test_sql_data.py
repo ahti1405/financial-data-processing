@@ -3,7 +3,7 @@ import pytest
 
 # Database connection details
 DB_SERVER = "192.168.0.103"  # Change if needed
-DB_USER = "aktan"  # Your SQL Server username
+DB_USER = "aktanbek"  # Your SQL Server username
 DB_PASSWORD = "Arzymamat5"  # Your SQL Server password
 DB_DATABASE = "AdventureWorks2022"  # Your database name
 

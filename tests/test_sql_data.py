@@ -10,7 +10,7 @@ DB_DATABASE = "AdventureWorks2022"  # Your database name
 @pytest.fixture(scope="module")
 def db_connection():
     """Establish a database connection."""
-    conn = pymssql.connect(server=DB_SERVER, port='1433', user=DB_USER, password=DB_PASSWORD, database=DB_DATABASE)
+    conn = pymssql.connect(server=DB_SERVER, port="1433", user=DB_USER, password=DB_PASSWORD, database=DB_DATABASE)
     yield conn
     conn.close()
 

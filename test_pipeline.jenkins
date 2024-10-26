@@ -23,13 +23,13 @@ pipeline {
                 }
             }
         }
-stages {
+
             stage('Test Python scripts') {
                 steps {
                       sh 'python3 some.py'
                 }
             }
-        }
+        
         stage('Run Tests') {
             steps {
                 script {

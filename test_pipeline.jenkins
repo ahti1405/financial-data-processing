@@ -26,7 +26,7 @@ pipeline {
 
             stage('Test Python scripts') {
                 steps {
-                      sh 'python3 some.py'
+                      sh './venv/bin/python3 some.py'
                 }
             }
         

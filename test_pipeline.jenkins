@@ -25,10 +25,14 @@ pipeline {
         }
 
             stage('Test Python scripts') {
-                steps {
-                      sh './venv/bin/python3 some.py'
-                }
+    steps {
+        script {
+            dir('financial-data-processing') {
+                sh './venv/bin/python3 some.py'  // Ensure the path is correct
             }
+        }
+    }
+}
         
         stage('Run Tests') {
             steps {

@@ -28,7 +28,7 @@ pipeline {
     steps {
         script {
             dir('financial-data-processing') {
-                sh './venv/bin/python3 s.py'  // Ensure the path is correct
+                sh './venv/bin/python3 some.py'  // Ensure the path is correct
             }
         }
     }

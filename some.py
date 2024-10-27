@@ -1,7 +1,7 @@
 import pymssql
 
 try:
-    conn = pymssql.connect(server="192.168.86.3", port="1433", user="TestLogin", password="Arzymamat5", database="AdventureWorks2022")
+    conn = pymssql.connect(server="192.168.86.3", port="1433", user="aktanbek", password="Arzymamat5", database="AdventureWorks2022")
     cursor = conn.cursor()
     cursor.execute("SELECT 1")
     print("Connection successful") if cursor.fetchone() else print("Connection failed")
@@ -14,7 +14,7 @@ except Exception as e:
     print(f"Unexpected error: {e}")
 
 try:
-    conn = pymssql.connect(server="127.0.0.1", port="1433", user="TestLogin", password="Arzymamat5", database="AdventureWorks2022")
+    conn = pymssql.connect(server="127.0.0.1", port="1433", user="aktanbek", password="Arzymamat5", database="AdventureWorks2022")
     cursor = conn.cursor()
     cursor.execute("SELECT 1")
     print("Connection successful") if cursor.fetchone() else print("Connection failed")
@@ -27,7 +27,7 @@ except Exception as e:
     print(f"Unexpected error: {e}")
 
 try:
-    conn = pymssql.connect(server="172.25.160.1", port="1433", user="TestLogin", password="Arzymamat5", database="AdventureWorks2022")
+    conn = pymssql.connect(server="172.25.160.1", port="1433", user="aktanbek", password="Arzymamat5", database="AdventureWorks2022")
     cursor = conn.cursor()
     cursor.execute("SELECT 1")
     print("Connection successful") if cursor.fetchone() else print("Connection failed")

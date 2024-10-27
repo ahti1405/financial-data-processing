@@ -1,7 +1,7 @@
 import pymssql
 
 try:
-    conn = pymssql.connect(server="127.0.0.1", port="1433", user="aktanbek", password="Arzymamat5", database="AdventureWorks2022")
+    conn = pymssql.connect(server="169.254.82.33", port="1433", user="aktanbek", password="Arzymamat5", database="AdventureWorks2022")
     cursor = conn.cursor()
     cursor.execute("SELECT 1")
     print("Connection successful") if cursor.fetchone() else print("Connection failed")

@@ -3,8 +3,7 @@ import pymssql
 with pymssql.connect(server='192.168.0.103',
                      database='TRN',
                      user='aktanbek',
-                     password='Arzymamat5',
-                     as_dict=True) as conn:
+                     password='Arzymamat5') as conn:
     print("Connection established successfully.")
 
     cursor = conn.cursor()

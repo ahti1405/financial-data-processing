@@ -1,6 +1,6 @@
 import pymssql
 
-with pymssql.connect(server='192.168.0.103:1433',
+with pymssql.connect(server='127.0.0.1',
                      database='AdventureWorks2022',
                      user='aktanbek',
                      password='Arzymamat5',

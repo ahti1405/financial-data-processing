@@ -1,10 +1,11 @@
 import pymssql
 
 conn = pymssql.connect(
-    server='host.docker.internal',
+    server='ntmachine.domain.com',
     user='aktanbek',
     password='Arzymamat5',
     database='AdventureWorks2022',
+    tds_version='7.3',
     as_dict=True
 )
 cursor = conn.cursor()

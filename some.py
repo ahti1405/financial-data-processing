@@ -10,4 +10,4 @@ with pymssql.connect(server='192.168.0.103',
     cursor = conn.cursor()
     cursor.execute('SELECT 1 AS test_column')
     result = cursor.fetchone()
-    print("Query executed su
+    print("Query executed successfully:", result)

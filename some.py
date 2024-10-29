@@ -1,6 +1,6 @@
 import pymssql
 
-with pymssql.connect(server='df8c6779cb6c',
+with pymssql.connect(server='host.containers.internal',
                      port='1433',
                      database='TRN',
                      user='aktanbek',

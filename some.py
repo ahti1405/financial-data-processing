@@ -1,6 +1,6 @@
 import pymssql
 
-with pymssql.connect(server='host.docker.internal',
+with pymssql.connect(server='10.88.0.2',
                      port='1433',
                      database='TRN',
                      user='aktanbek',

@@ -6,7 +6,7 @@ with pymssql.connect(server='192.168.0.104',
                      user='aktanbek',
                      password='Arzymamat5',
                      as_dict=True,
-                    timeout=30) as conn:
+                    timeout=60) as conn:
     print("Connection established successfully.")
 
     cursor = conn.cursor()

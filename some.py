@@ -3,7 +3,7 @@ import pymssql
 with pymssql.connect(server='192.168.0.104\\SQLEXPRESS'',
                      port='1433',
                      database='TRN',
-                     user='ahti',
+                     user='aktanbek',
                      password='Arzymamat5',
                      as_dict=True) as conn:
     print("Connection established successfully.")

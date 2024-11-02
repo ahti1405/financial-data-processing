@@ -1,6 +1,6 @@
 import pymssql
 
-with pymssql.connect(server='192.168.0.102',
+with pymssql.connect(server='localhost\SQLEXPRESS',
                      port='1433',
                      database='TRN',
                      user='aktanbek',

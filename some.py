@@ -1,9 +1,9 @@
 import pymssql
 
-with pymssql.connect(server='0.0.0.0:1433',
+with pymssql.connect(server='192.168.0.104',
                      port='1433',
                      database='TRN',
-                     user='aktanbek',
+                     user='ahti',
                      password='Arzymamat5',
                      as_dict=True) as conn:
     print("Connection established successfully.")
